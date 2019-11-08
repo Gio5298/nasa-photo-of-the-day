@@ -7,6 +7,7 @@ const BodyDiv = styled.div`
 
 const NavBar = styled.div`
   background-color: rgb(91, 93, 172);
+  border-bottom: 2px solid white;
 `;
 
 const SiteTitle = styled.h1`
@@ -39,10 +40,11 @@ const CenterContent = styled.div`
 `;
 
 const SpaceImg = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 35%;
+  height: 35%;
   margin: 1.5rem;
   border-radius: 5px;
+  border: 2px solid black;
 `;
 
 const DescriptContent = styled.div`
@@ -51,6 +53,10 @@ const DescriptContent = styled.div`
   text-align: center;
   padding: 3rem;
   margin: 5rem 0;
+`;
+
+const DescriptPara = styled.p`
+  font-size: 1.2rem
 `;
 
 const PhotoCard = props => {
@@ -67,7 +73,7 @@ const PhotoCard = props => {
             <SpaceImg src= {props.imgurl} alt="Nasa Astronomy Image"/>
             <DescriptContent>
                 <h3>Description</h3>
-                <p>{props.explanation}</p>
+                <DescriptPara>{props.explanation}</DescriptPara>
             </DescriptContent>
             </CenterContent>
         </BodyDiv>
